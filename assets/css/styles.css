@@ -19,7 +19,7 @@ body {
 
 h1 {
     font-family: 'Stint Ultra Expanded', cursive;
-    font-size: 250%;
+    font-size: 240%;
     color: #92AF44;
     /* color: #f2cd60; */
 }
@@ -122,6 +122,21 @@ header h3 {
   }
   
   .big-emoji {
-    width: 120px;
+    width: 115px;
     height: auto;
+  }
+
+
+  
+/* ----- Footer ----*/
+
+footer {
+    height: 40px;
+    text-align: center;
+  }
+  
+  footer p {
+    color: #cbd7de;
+    display: inline-block;
+    margin: 0 50px;
   }
