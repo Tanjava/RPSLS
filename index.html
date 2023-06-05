@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,15 +30,39 @@
         </div>
     </header>
 
-    <section class="game-board"></section>
+    <section class="game">
+        <div class="game-section">
+            <div class="player-section">
+                <h2 class="score">You: <span id="player-score">0</span></h2>
+                <img img src="assets/images/rock.png" class="big-emoji" alt="Rock Emoji">
+            </div>
+            <div class="vs-section">
+                <h3>VS</h3>
+            </div>
+            <div class="house-section">
+                <h2>House: <span class="house-score">0</span></h2>
+                <img src="assets/images/rock-comp.png" class="big-emoji" alt="Rock Emoji">
+            </div>
+        </div>
+        <div>
+            <div class="game-options">
+                <h3>Make a Move!</h3>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div>
+
+    </section>
 
     <footer>
-        <p>© 2023 Tanjava</p>
     </footer>
 
     <!-- JavaScript script -->
     <script src="assets/js/script.js"></script>
-    
+
 </body>
 
 </html>
