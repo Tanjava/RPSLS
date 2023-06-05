@@ -22,7 +22,9 @@
 <body>
 
     <header>
-        <h1>Rock • Paper • Scissors • Lizard • Spock</h1>
+        <h1>
+            Rock • Paper • Scissors • Lizard • Spock
+        </h1>
         <div>
             <h3>5 rounds</h3>
             <img src="assets/images/Spock-PngAAA.png" class="spock-logo" alt="Spock logo">
@@ -34,37 +36,36 @@
         <div class="game-section">
             <div class="player-section">
                 <h2 class="score">You: <span id="player-score">0</span></h2>
-                <img img src="assets/images/rock.png" class="big-emoji" alt="Rock Emoji">
+                <img img src="assets/images/rock.png" class=" rock big-emoji" alt="Rock Emoji">
             </div>
             <div class="vs-section">
                 <h3>VS</h3>
             </div>
             <div class="house-section">
-                <h2>House: <span class="house-score">0</span></h2>
-                <img src="assets/images/rock-comp.png" class="big-emoji" alt="Rock Emoji">
+                <h2 class="score">House: <span id="house-score">0</span></h2>
+                <img src="assets/images/rock.png" class="rock big-emoji-2" alt="Rock Emoji">
             </div>
         </div>
         <div>
             <div class="game-options">
-                <h3>Make a Move!</h3>
-                <button class="btn" title="Rock &gt Scissors + Lizard">
+                <h3 class="game-result">Make a Move!</h3>
+                <button class="btn" data-choice="Rock" title="Rock &gt Scissors + Lizard">
                     <img src="assets/images/rock.png" class="small-emoji" alt="Rock Emoji">
                 </button>
-                <button class="btn" title="Paper &gt Rock + Spock">
+                <button class="btn" data-choice="Paper" title="Paper &gt Rock + Spock">
                     <img src="assets/images/paper.png" class="small-emoji" alt="Paper Emoji">
                 </button>
-                <button class="btn" title="Scissors &gt Paper + Lizard">
+                <button class="btn" data-choice="Scissors" title="Scissors &gt Paper + Lizard">
                     <img src="assets/images/scissors.png" class="small-emoji" alt="Scissors Emoji">
                 </button>
-                <button class="btn" title="Lizard &gt Paper + Spock">
+                <button class="btn" data-choice="Lizard" title="Lizard &gt Paper + Spock">
                     <img src="assets/images/lizard.png" class="small-emoji" alt="Lizard Emoji">
                 </button>
-                <button class="btn" title="Spock &gt Rock + Scissors">
+                <button class="btn" data-choice="Spock" title="Spock &gt Rock + Scissors">
                     <img src="assets/images/spock.png" class="small-emoji" alt="Spock Emoji">
                 </button>
             </div>
         </div>
-
     </section>
 
     <footer>
