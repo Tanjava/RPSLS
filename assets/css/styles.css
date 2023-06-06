@@ -9,17 +9,25 @@ body {
     font-weight: 300;
     background-color: #0d1321;
     color: #e5f1f8;
-    margin: 0 20%;
     height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
     font-family: 'Stint Ultra Expanded', cursive;
-    font-size: 240%;
+    font-size: 2.5vw;
     color: #92AF44;
+}
+
+h2 {
+    font-size: 1.5vw;
+}
+
+h3 {
+    font-size: 1.2vw;
 }
 
 h2,
@@ -33,7 +41,7 @@ h3 {
 
 header {
     text-align: center;
-    margin: 30px 0 10px;
+    margin: 50px 0 10px;
 }
 
 header div {
@@ -43,7 +51,7 @@ header div {
 }
 
 .spock-logo {
-    width: 90px;
+    width: 10%;
     height: auto;
     margin: 20px 35px 0;
 }
@@ -61,7 +69,8 @@ header h3 {
     display: flex;
     flex-direction: column;
     border: 2px #B9DAEE solid;
-    padding: 35px;
+    padding: 35px 0;
+    width: 60%;
 }
 
 .game-section {
@@ -69,6 +78,7 @@ header h3 {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
 }
 
 .game-section h2 {
@@ -76,7 +86,7 @@ header h3 {
 }
 
 .player-section,
-.house-section, 
+.house-section,
 .game-options {
     text-align: center;
 }
@@ -85,11 +95,9 @@ header h3 {
     padding: 10px;
     background-color: #3D5471;
     border-radius: 5px;
-    margin: auto 100px;
 }
 
 .vs-section h3 {
-    font-size: 20px;
     color: #333;
 }
 
@@ -97,7 +105,7 @@ header h3 {
 
 .game-options h3 {
     margin-bottom: 25px;
-  }
+}
 
 .btn {
     background-color: #273c5c;
@@ -105,42 +113,116 @@ header h3 {
     height: 65px;
     border-radius: 50%;
     margin: 0 10px;
-    box-shadow: 0px 5px 10px 0px rgba(0,255,255,0.7);    
-  }
-  
-  .btn:hover {
-    background-color: #324867; 
+    box-shadow: 0px 5px 10px 0px rgba(0, 255, 255, 0.7);
+}
+
+.btn:hover {
+    background-color: #324867;
     transform: translateY(-2px);
-    box-shadow: 0px 10px 20px 2px rgba(0,255,255,0.7);     
-  }
-  
-  .small-emoji {
+    box-shadow: 0px 10px 20px 2px rgba(0, 255, 255, 0.7);
+}
+
+.small-emoji {
     width: 55px;
     padding: 10px;
-  }
-  
-  .big-emoji {
-    width: 115px;
-    height: auto;
-  }
+}
 
-  .big-emoji-2 {
-    width: 120px;
+.big-emoji {
+    width: 100%;
+    height: auto;
+}
+
+.big-emoji-2 {
+    max-width: 95%;
     height: auto;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-  }
+}
 
-  
+
 /* ----- Footer ----*/
 
 footer {
     height: 40px;
     text-align: center;
-  }
-  
-  footer p {
+}
+
+footer p {
     color: #cbd7de;
     display: inline-block;
     margin: 0 50px;
-  }
+}
+
+
+
+/* ----- media queries ----- */
+
+/* for larger screen size from 1500px wide and down */
+@media screen and (max-width: 1550px) {
+    header {
+        margin: 30px 0 10px;
+    }
+/* 
+    .big-emoji {
+        width: 115px;
+    }
+
+    .big-emoji-2 {
+        width: 115px;
+    } */
+}
+
+/* for medium to larger screen size from 1280px wide and down */
+@media screen and (max-width: 1280px) {
+    header {
+        margin: 20px 0 10px;
+    }
+
+    .game-area {
+        padding: 25px 0;
+
+    .game-section h2 {
+        margin-bottom: 25px;
+    }
+
+    .game-options h3 {
+        margin-bottom: 20px;
+    }
+       
+    .btn {
+        width: 55px;
+        height: 55px;
+    }
+
+    .small-emoji {
+        width: 47px;
+        height: 47px;
+    }
+
+    .big-emoji {
+        width: 95px;
+    }
+
+    .big-emoji-2 {
+        width: 100px;
+    }
+}
+}
+
+
+/* for medium screen size from 1000px wide and down */
+@media screen and (max-width: 1000px) {
+    .big-emoji {
+        width: 80px;
+    }
+
+    .big-emoji-2 {
+        width: 85px;
+    }    
+}
+
+/* for small screen size from 820px wide and down */
+@media screen and (max-width: 800px) {}
+
+/* for extra small screen size from 580px wide and down */
+@media screen and (max-width: 580px) {}
