@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
             let houseChoice = randomHouse();
             console.log('Computer chose ' + houseChoice);
 
-            showHouseChoice(houseChoice);  // delete later
-            showPlayerChoice(playerChoice);  // delete later
+            showHouseChoice(houseChoice);  // can delete later
+            showPlayerChoice(playerChoice);  // can delete later
 
             playGame(playerChoice)
         });
@@ -56,7 +56,7 @@ function showPlayerChoice(playerChoice) {
 }
 
 /**
- * Determining the winner of the game
+ * Determine the winner of the game
  */
 function playGame(playerChoice) {
     let houseChoice = randomHouse();
@@ -67,18 +67,37 @@ function playGame(playerChoice) {
         console.log("It's a tie");
         document.getElementById('game-result').innerHTML = "It's a tie!"
     } else {
-        if (
+        if ( //player wins
             (playerChoice === 'Rock' && (houseChoice === 'Scissors' || houseChoice === 'Lizard')) ||
             (playerChoice === 'Paper' && (houseChoice === 'Rock' || houseChoice === 'Spock')) ||
             (playerChoice === 'Scissors' && (houseChoice === 'Paper' || houseChoice === 'Lizard')) ||
             (playerChoice === 'Lizard' && (houseChoice === 'Paper' || houseChoice === 'Spock')) ||
             (playerChoice === 'Spock' && (houseChoice === 'Rock' || houseChoice === 'Scissors'))
-        ) {
+        ) { // then
+            increasePlayerScore();
             console.log('Player wins');
             document.getElementById('game-result').innerHTML = "You win!"            
-        } else {
+        } else { // otherwise computer wins
+            increaseHouseScore();
             console.log('House wins');
             document.getElementById('game-result').innerHTML = "You lose!"
         }
     }
+}
+
+/**
+ * Increase player score
+ */
+function increasePlayerScore() {
+    let playerScore = parseInt(document.getElementById('player-score').innerText);
+    document.getElementById('player-score').innerText = ++playerScore
+}
+
+
+/**
+ * Increase computer score
+ */
+function increaseHouseScore() {
+    let houseScore = parseInt(document.getElementById('house-score').innerText);
+    document.getElementById('house-score').innerText = ++houseScore
 }
