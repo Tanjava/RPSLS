@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
             let houseChoice = randomHouse();
             console.log('Computer chose ' + houseChoice);
 
-            showHouseChoice(houseChoice);  // can delete later
-            showPlayerChoice(playerChoice);  // can delete later
+            showHouseChoice(houseChoice); // can delete later
+            showPlayerChoice(playerChoice); // can delete later
 
             playGame(playerChoice)
         });
@@ -22,7 +22,52 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 
+
 let gameOptions = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+let playerScore = 0;
+let houseScore = 0;
+// let winner = '';
+
+let gameResult = document.getElementById('game-result');
+
+
+
+/**
+ * Play the game and
+ * determine the winner of the game
+ */
+function playGame(playerChoice) {
+    let houseChoice = randomHouse();
+    showHouseChoice(houseChoice);
+    showPlayerChoice(playerChoice);
+
+    if (playerChoice === houseChoice) {
+        console.log("It's a tie");
+        gameResult.innerHTML = "It's a tie!"
+    } else {
+        if ( 
+            (playerChoice === 'Rock' && (houseChoice === 'Scissors' || houseChoice === 'Lizard')) ||
+            (playerChoice === 'Paper' && (houseChoice === 'Rock' || houseChoice === 'Spock')) ||
+            (playerChoice === 'Scissors' && (houseChoice === 'Paper' || houseChoice === 'Lizard')) ||
+            (playerChoice === 'Lizard' && (houseChoice === 'Paper' || houseChoice === 'Spock')) ||
+            (playerChoice === 'Spock' && (houseChoice === 'Rock' || houseChoice === 'Scissors'))
+        ) { 
+            // winner = 'player';
+            playerScore++;
+            console.log('Player wins');
+            document.getElementById('player-score').innerHTML = playerScore
+            gameResult.innerHTML = "You win!"
+        } else { 
+            // winner = 'house'
+            houseScore++;
+            console.log('House wins');
+            document.getElementById('house-score').innerHTML = houseScore
+            gameResult.innerHTML = "You lose!"
+        }
+        // increaseScore(winner)
+    }
+}
+
 
 
 /**
@@ -39,7 +84,7 @@ function randomHouse() {
 function showHouseChoice(houseChoice) {
     let houseSection = document.getElementById('house-section');
     houseSection.innerHTML = `
-      <h2 class="score">House: <span id="house-score">0</span></h2>
+      <h2 class="score">House: <span id="house-score">${houseScore}</span></h2>
       <img src="assets/images/${houseChoice.toLowerCase()}.png" class="big-emoji-2" alt="${houseChoice} Emoji">
     `;
 }
@@ -50,54 +95,18 @@ function showHouseChoice(houseChoice) {
 function showPlayerChoice(playerChoice) {
     let playerSection = document.getElementById('player-section');
     playerSection.innerHTML = `
-      <h2 class="score">You: <span id="player-score">0</span></h2>
+      <h2 class="score">You: <span id="player-score">${playerScore}</span></h2>
       <img src="assets/images/${playerChoice.toLowerCase()}.png" class="big-emoji" alt="${playerChoice} Emoji">
     `;
 }
 
-/**
- * Determine the winner of the game
- */
-function playGame(playerChoice) {
-    let houseChoice = randomHouse();
-    showHouseChoice(houseChoice);
-    showPlayerChoice(playerChoice);
-
-    if (playerChoice === houseChoice) {
-        console.log("It's a tie");
-        document.getElementById('game-result').innerHTML = "It's a tie!"
-    } else {
-        if ( //player wins
-            (playerChoice === 'Rock' && (houseChoice === 'Scissors' || houseChoice === 'Lizard')) ||
-            (playerChoice === 'Paper' && (houseChoice === 'Rock' || houseChoice === 'Spock')) ||
-            (playerChoice === 'Scissors' && (houseChoice === 'Paper' || houseChoice === 'Lizard')) ||
-            (playerChoice === 'Lizard' && (houseChoice === 'Paper' || houseChoice === 'Spock')) ||
-            (playerChoice === 'Spock' && (houseChoice === 'Rock' || houseChoice === 'Scissors'))
-        ) { // then
-            increasePlayerScore();
-            console.log('Player wins');
-            document.getElementById('game-result').innerHTML = "You win!"            
-        } else { // otherwise computer wins
-            increaseHouseScore();
-            console.log('House wins');
-            document.getElementById('game-result').innerHTML = "You lose!"
-        }
-    }
-}
-
-/**
- * Increase player score
- */
-function increasePlayerScore() {
-    let playerScore = parseInt(document.getElementById('player-score').innerText);
-    document.getElementById('player-score').innerText = ++playerScore
-}
-
-
-/**
- * Increase computer score
- */
-function increaseHouseScore() {
-    let houseScore = parseInt(document.getElementById('house-score').innerText);
-    document.getElementById('house-score').innerText = ++houseScore
-}
+// /**
+//  * Increase winner's score
+//  */
+// function increaseScore(winner) {
+//     if (winner === 'player') {
+//         playerScore++;
+//     } else if (winner === 'house') {
+//         houseScore++
+//     }
+// }

@@ -140,12 +140,6 @@ header h3 {
     box-shadow: 0px 5px 10px 0px rgba(0, 255, 255, 0.7);
 }
 
-.btn:hover {
-    background-color: #324867;
-    transform: translateY(-2px);
-    box-shadow: 0px 10px 20px 2px rgba(0, 255, 255, 0.7);
-}
-
 .small-emoji {
     width: 55px;
     padding: 10px;
@@ -163,6 +157,16 @@ footer {
 
 
 /* ----- media queries ----- */
+
+/* for all devices that can hover */
+@media (hover: hover) { 
+
+.btn:hover {
+    background-color: #324867;
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 20px 2px rgba(0, 255, 255, 0.7);
+}
+}
 
 /* for medium to larger screen size from 1280px wide and down */
 @media screen and (max-width: 1280px) {
