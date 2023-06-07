@@ -171,11 +171,11 @@ footer {
     }
 
     .game-area {
-        padding: 25px 0;
+        padding: 40px 0;
     }
 
     .game-section {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .game-section h2 {
@@ -190,37 +190,53 @@ footer {
         width: 95px;
     }
 
+    .vs-section {
+        margin-top: 45px;
+    }
+
     .game-options h3 {
-        margin-bottom: 20px;
-    }
-
-    .btn {
-        width: 55px;
-        height: 55px;
-    }
-
-    .small-emoji {
-        width: 47px;
-        height: 47px;
+        margin-bottom: 30px;
     }
 }
 
 /* for medium screen size from 1024px wide and down */
 @media screen and (max-width: 1024px) {
+    
+    h1 {
+        font-size: 3.5vw;
+    }
+
+    h2 {
+        font-size: 2.3vw;
+    }
+
+    h3 {
+        font-size: 2vw
+    }
+    
+    p {
+        font-size: 1.8vw;
+    }
+    
     header {
         margin: 50px 0 10px;
     }
 
     .game-area {
-        padding: 40px 0;
+        padding: 50px 0 60px;
+        width: 80%;
     }
 
-    .big-emoji {
-        width: 80px;
+    .game-section {
+        margin-bottom: 60px;
     }
 
-    .big-emoji-2 {
-        width: 80px;
+    .vs-section {
+       margin-top: 55px;
+    }
+
+    .game-options h3 {
+        margin-bottom: 35px;
     }
 
     hr {
@@ -235,15 +251,80 @@ footer {
 @media screen and (max-width: 850px) {
 
     .big-emoji {
-        width: 65px;
+        width: 80px;
     }
 
     .big-emoji-2 {
-        width: 65px;
+        width: 80px;
+    }
+
+    .vs-section {
+        padding: 8px;
+        margin-top: 45px;
+    }
+
+    .btn {
+        width: 55px;
+        height: 55px;
+    }
+
+    .small-emoji {
+        width: 47px;
+        height: 47px;
+    }
+
+}
+
+/* for extra small screen size from 500px wide and down */
+@media screen and (max-width: 580px) {
+    
+    h2 {
+        font-size: 2.5vw;
+    }
+
+    h3 {
+        font-size: 2.3vw;
+    }
+    
+    p {
+        font-size: 2vw;
+    }
+    
+    header {
+        margin: 30px 0 10px;
+    }
+
+    .spock-logo {
+        margin: 15px 20px 0
+    }
+
+    .game-area {
+        padding: 20px 0 30px;
+    }
+
+    .game-section {
+        margin-bottom: 20px;
+    }
+
+    .game-section h2 {
+        margin-bottom: 20px;
+    }
+
+    .big-emoji {
+        width: 55px;
+    }
+
+    .big-emoji-2 {
+        width: 55px;
     }
 
     .vs-section {
         padding: 5px;
+        margin-top: 30px;
+    }
+
+    .game-options h3 {
+        margin-bottom: 20px;
     }
 
     .btn {
@@ -255,45 +336,6 @@ footer {
     .small-emoji {
         width: 40px;
         height: 40px;
-    }
-}
-
-/* for extra small screen size from 500px wide and down */
-@media screen and (max-width: 580px) {
-
-    header {
-        margin: 30px 0 10px;
-    }
-
-    .spock-logo {
-        margin: 15px 20px 0
-    }
-
-    .game-area {
-        padding: 20px 0;
-    }
-
-    .game-section h2 {
-        margin-bottom: 20px;
-    }
-
-    .big-emoji {
-        width: 45px;
-    }
-
-    .big-emoji-2 {
-        width: 45px;
-    }
-
-    .btn {
-        width: 35px;
-        height: 35px;
-        margin: 0 5px;
-    }
-
-    .small-emoji {
-        width: 33px;
-        height: 33px;
     }
 
     footer {
