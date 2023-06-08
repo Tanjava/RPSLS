@@ -34,7 +34,20 @@ let round = 0;
 
 let gameResult = document.getElementById('game-result');
 let endResult = document.getElementById('end-result');
+let modal = document.getElementById('modal');
+let gameRules = document.getElementById('game-rules');
+let close = document.getElementsByClassName('close');
 
+gameRules.addEventListener('click', openModal);
+close.addEventListener('click', closeModal);
+
+function openModal() {
+    modal.style.display = 'block';
+    }
+
+function closeModal() {
+    modal.style.display = 'none';
+}
 
 
 /**
