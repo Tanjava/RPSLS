@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 750);
 
         });
-    };
-})
+    }
+});
 
 
 
@@ -46,7 +46,7 @@ function playGame(playerChoice) {
     
     if (round >= 5) {
         EndGame();
-        return
+        return;
     }
 
     round++
@@ -57,7 +57,7 @@ function playGame(playerChoice) {
 
     if (playerChoice === houseChoice) {
         console.log("It's a tie");
-        gameResult.innerHTML = "It's a tie!"
+        gameResult.innerHTML = "It's a tie!";
     } else {
         if (
             (playerChoice === 'Rock' && (houseChoice === 'Scissors' || houseChoice === 'Lizard')) ||
@@ -69,14 +69,14 @@ function playGame(playerChoice) {
             // winner = 'player';
             playerScore++;
             console.log('Player wins');
-            document.getElementById('player-score').innerHTML = playerScore
-            gameResult.innerHTML = "You win!"
+            document.getElementById('player-score').innerHTML = playerScore;
+            gameResult.innerHTML = "You win!";
         } else {
             // winner = 'house'
             houseScore++;
             console.log('House wins');
-            document.getElementById('house-score').innerHTML = houseScore
-            gameResult.innerHTML = "You lose!"
+            document.getElementById('house-score').innerHTML = houseScore;
+            gameResult.innerHTML = "You lose!";
         }
         // increaseScore(winner)
     }
