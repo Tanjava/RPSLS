@@ -13,10 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
             let houseChoice = randomHouse();
             console.log('Computer chose ' + houseChoice);
 
-            showHouseChoice(houseChoice); // can delete later
-            showPlayerChoice(playerChoice); // can delete later
+            playGame(playerChoice);
 
-            playGame(playerChoice)
+            setTimeout(() => {
+
+                showHouseChoice('rock'); // Show computer's choice then reset default image
+                showPlayerChoice('rock'); // Show player's choice then reset to default image
+            }, 750); 
+            
         });
     };
 })
