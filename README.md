@@ -27,17 +27,14 @@ The live game can be accessed and played here - https://tanjava.github.io/RPSLS/
 - [Features](#features)
   - [Existing Features](#existing-features)
     - [Languages Used](#languages-used)
-    - [Navigation](#navigation)
-    - [Website banner](#website-banner)
-    - [Home Page](#home-page)
-    - [Location](#location)
+    - [Header](#header)
+    - [Gameboard](#wgameboard)
+    - [Description](#description--tooltip)
+    - [Interactive Elements](#interactive-elements)
+      - [Game Option Buttons](#game-option-buttons)
+      - [Scoreboard](#scoreboard)
+      - [visual feedback](#visual-feedback)
     - [Footer](#footer)
-    - [About](#about)
-    - [Readings](#readings)
-      - [Big Three](#big-three--career--birth-chart)
-      - [Career](#big-three--career--birth-chart)
-      - [Birth Chart](#big-three--career--birth-chart)
-    - [Contact](#contact)
   - [Future Features](#future-features)
 - [Testing](#testing)
   - [Validator Testing](#validator-testing)
@@ -53,7 +50,7 @@ The design of the RPSLS game is simple and intuitive, with clear visuals and int
 
 ## Color Scheme
 
-Based on the logo, the yellow hand emoji's and ..... the following colors were chosen:
+Based on the logo and the yellow hand emoji's the following colors were chosen:
 
 ![Color palette](assets/readme-images/rpsls-color-palette.png)
 
@@ -94,14 +91,11 @@ This is a one page game website with interactive elements. The user plays agains
 
 The header at the top of the page includes the game's title and logo. 
 
-![Logo and Navigation Bar](assets/readme-images/LC-header.png)
-
 
 ### Gameboard
 
 The gameboard is the main section of the game that displays the user's and computer's scores, their choices (represented by an big emoji), and the game options (buttons).
 
-![Website banner](assets/readme-images/LC-hero-image.png)
 
 ### Description/Tooltip
 
@@ -126,7 +120,6 @@ The scoreboard displays the current scores for the user and the computer. The sc
 - Each round when the user selects a game option, the game visually updates the user's and computer's choices with the corresponding emoji images.
 - Furthermore, a message with the game outcome (win, lose, tie) will be displayed after every round (e.g. "You win this round!") and at the end of the game with the final result (e.g. "You lost! Try again").
 
-![Welcome!](assets/readme-images/LC-welcome.png)
 
 ### Footer Section
 
