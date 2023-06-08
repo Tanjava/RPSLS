@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 showHouseChoice('rock'); // Show computer's choice then reset default image
                 showPlayerChoice('rock'); // Show player's choice then reset to default image
-            }, 750); 
-            
+            }, 750);
+
         });
     };
 })
@@ -31,8 +31,10 @@ let gameOptions = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 let playerScore = 0;
 let houseScore = 0;
 // let winner = '';
+let round = 0;
 
 let gameResult = document.getElementById('game-result');
+let endResult = document.getElementById('end-result');
 
 
 
@@ -41,6 +43,14 @@ let gameResult = document.getElementById('game-result');
  * determine the winner of the game
  */
 function playGame(playerChoice) {
+    
+    if (round >= 5) {
+        EndGame();
+        return
+    }
+
+    round++
+
     let houseChoice = randomHouse();
     showHouseChoice(houseChoice);
     showPlayerChoice(playerChoice);
@@ -49,19 +59,19 @@ function playGame(playerChoice) {
         console.log("It's a tie");
         gameResult.innerHTML = "It's a tie!"
     } else {
-        if ( 
+        if (
             (playerChoice === 'Rock' && (houseChoice === 'Scissors' || houseChoice === 'Lizard')) ||
             (playerChoice === 'Paper' && (houseChoice === 'Rock' || houseChoice === 'Spock')) ||
             (playerChoice === 'Scissors' && (houseChoice === 'Paper' || houseChoice === 'Lizard')) ||
             (playerChoice === 'Lizard' && (houseChoice === 'Paper' || houseChoice === 'Spock')) ||
             (playerChoice === 'Spock' && (houseChoice === 'Rock' || houseChoice === 'Scissors'))
-        ) { 
+        ) {
             // winner = 'player';
             playerScore++;
             console.log('Player wins');
             document.getElementById('player-score').innerHTML = playerScore
             gameResult.innerHTML = "You win!"
-        } else { 
+        } else {
             // winner = 'house'
             houseScore++;
             console.log('House wins');
@@ -70,6 +80,7 @@ function playGame(playerChoice) {
         }
         // increaseScore(winner)
     }
+
 }
 
 
@@ -102,6 +113,16 @@ function showPlayerChoice(playerChoice) {
       <h2 class="score">You: <span id="player-score">${playerScore}</span></h2>
       <img src="assets/images/${playerChoice.toLowerCase()}.png" class="big-emoji" alt="${playerChoice} Emoji">
     `;
+}
+
+function EndGame() {
+    if (playerScore > houseScore) {
+        endResult.innerHTML = `<h3 id="end-result" style="color: #92AF44">You Won!<br>Please Refresh</h3>`;
+    } else if (playerScore < houseScore) {
+        endResult.innerHTML = `<h3 id="end-result" style="color: #e74646">You Lost!<br>Please Refresh</h3>`;
+    } else {
+        endResult.innerHTML = `<h3 id="end-result" style="color: #f2cd60">You Tied!<br>Please Refresh</h3>`;
+    }
 }
 
 // /**
