@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
             playGame(playerChoice);
 
             setTimeout(() => {
-
                 showHouseChoice('rock'); // Show computer's choice then reset default image
                 showPlayerChoice('rock'); // Show player's choice then reset to default image
             }, 750);
@@ -45,11 +44,11 @@ let endResult = document.getElementById('end-result');
 function playGame(playerChoice) {
     
     if (round >= 5) {
-        EndGame();
+        endGame();
         return;
     }
 
-    round++
+    round++;
 
     let houseChoice = randomHouse();
     showHouseChoice(houseChoice);
@@ -115,7 +114,7 @@ function showPlayerChoice(playerChoice) {
     `;
 }
 
-function EndGame() {
+function endGame() {
     if (playerScore > houseScore) {
         endResult.innerHTML = `<h3 id="end-result" style="color: #92AF44">You Won!<br>Please Refresh</h3>`;
     } else if (playerScore < houseScore) {
