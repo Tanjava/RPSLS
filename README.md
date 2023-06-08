@@ -1,108 +1,196 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# RPSLS - A game of Rock, Paper, Scissors, Lizard, and Spock
 
-Welcome Tanjava,
+![Am I Responsive Image](assets/readme-images/LC-am-i-responsive.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Popularized by the TV Show "The Big Bang Theory, Rock, Paper, Scissors, Lizard, Spock (RPSLS) is a game of chance and the extended version of the classics game of Rock, Paper, Scissors. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Each player picks a random variable and reveals it at the same time. 
 
-## Gitpod Reminders
+- Scissors cuts Paper
+- Paper covers Rock
+- Rock crushes Lizard
+- Lizard poisons Spock
+- Spock smashes Scissors
+- Scissors decapitates Lizard
+- Lizard eats Paper
+- Paper disproves Spock
+- Spock vaporizes Rock
+- (and as it always has) Rock crushes Scissors
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The live game can be accessed and played here - https://tanjava.github.io/RPSLS/
 
-`python3 -m http.server`
+# Table of contents
+- [Design](#design)
+  - [Color Scheme](#color-scheme)
+  - [Typography](#typography)
+  - [Images](#images)    
+- [Features](#features)
+  - [Existing Features](#existing-features)
+    - [Languages Used](#languages-used)
+    - [Navigation](#navigation)
+    - [Website banner](#website-banner)
+    - [Home Page](#home-page)
+    - [Location](#location)
+    - [Footer](#footer)
+    - [About](#about)
+    - [Readings](#readings)
+      - [Big Three](#big-three--career--birth-chart)
+      - [Career](#big-three--career--birth-chart)
+      - [Birth Chart](#big-three--career--birth-chart)
+    - [Contact](#contact)
+  - [Future Features](#future-features)
+- [Testing](#testing)
+  - [Validator Testing](#validator-testing)
+  - [Unfixed Bugs](#unfixed-bugs)
+  - [Frameworks, Libraries & Programs Used](#frameworks-libraries-and-programs-used)
+- [Deployment](#deployment)
+- [Credits](#credits)
+  - [Media](#media)
 
-A blue button should appear to click: _Make Public_,
+# Design
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Color Scheme
 
-A blue button should appear to click: _Make Public_,
+Based on the logo, the yellow hand emoji's and ..... the following colors were chosen:
 
-Another blue button should appear to click: _Open Browser_.
+![Color palette](assets/readme-images/rpsls-color-palette.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+## Typography
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Stint Ultra Expanded was used for a playful game title. Orbitron was used for the body for a more futuristic and geometric vibe and Roboto was used for the footer.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Images
 
-------
+Hand emoji images were used as game gestures.
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# Features
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Existing Features:
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+This is a one page website with interactive elements. The user plays against the computer for 5 rounds and will win the game if they have the highest score at the end.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Languages Used
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- HTML5
+- CSS3
+- JavaScript
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Header
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+The header at the top of the age includes the game's title and logo. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Logo and Navigation Bar](assets/readme-images/LC-header.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Gameboard
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Below the header is the gameboard. Here the big hand emoji's representing the game moves will be displayed. 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Website banner](assets/readme-images/LC-hero-image.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Description/Tooltip
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Upon hovering over each button, a brief description/tooltip appears to provide information about the corresponding game mov. This helps users understand the rules of the game and the strenghts/weaknesses of each move.
 
-------
 
-## FAQ about the uptime script
+### Interactive Elemente
 
-**Why have you added this script?**
+This page is the first page users will see. It has a 'Welcome' and a 'Work With Me' section, and is designed to capture their attention and encourage themn to explore the website further.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+#### Scoreboard
 
-**How will this affect me?**
+The game keeps track of the user's and computer's score and updates dynamically as the game progresse. 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+#### Visual Feedback
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+Visual feedback is provided for game outcomes. A message with the game outcome (win, lose, tie) will be displayed after every round and at the end of the game.
 
-**So….?**
+![Welcome!](assets/readme-images/LC-welcome.png)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+#### Footer Section
 
-**Can I opt out?**
+The footer contains copyright information on the left and the game rules on the right.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Future Features
 
-**Anything more?**
+- XX
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+# Testing
 
-Happy coding!
+Testing of the website has been conducted on a laptop using GOogle Chrome and Microsoft Edge, and mobile using Safari and Android. 
+
+Google DevTools was used to test different devices and screen resolutions. 
+
+All of the buttons function as expected.
+
+
+## Validator Testing
+
+- HTML
+  - No errors were returned when passing through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftanjava.github.io%2FLauraCatharina)
+
+![W3C HTML Validator](assets/readme-images/LC-html-checker.png)
+
+- CSS
+  - No errors were found when passing through the official [Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftanjava.github.io%2FRPSLS%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en):
+
+![W3C CSS Validator](assets/readme-images/rpsls-css-checker.png)
+
+- Lighthouse (Accessibility Audit)
+
+![Lighthouse Accessibility Audit](assets/readme-images/LC-lighthouse-checker.png)
+
+
+## Unfixed Bugs
+
+Initially, when using the site on mobile resolution, the hoverable navigation of the Readings, and it's submenu, couldn't be accessed as the dropdown menu briefly appeared when clicking on Readings, but the navigation then immediatly reloaded and disappeared. The user would have to click Readings, hold it and then drag down to the submenu for the readings button and submenu buttons to be accessible. 
+
+To fix this when using the site on mobile resolution, I created a clickable dropdown menu with a down arrow symbol. It still doesn't work perfectly as the user now has to click the precise down arrow target area in order to be able to use the submenu, but at least the readings button and submenu buttons are accessible this way. In case the user does not click the precise down arrow target area, they will be led to the Readings page and can always navigate to the specific readings from there. 
+
+
+## Frameworks, Libraries and Programs Used
+
+- Github: Store Repository
+- Gitpod: Create HTML and CSS files
+- Google Fonts: 
+  - Font-family 'Quicksand'
+- Font Awesome & Favicon
+  - For cover text icons, location icon and Social Media icons
+- Am I Responsive
+  - Screenshot of the final project on all devices
+
+
+# Deployment
+
+The site was deployed to GitHub pages. The steps to deploy are as follows: 
+
+  1. In the GitHub repository, navigate to the Settings tab. 
+  2. From the settings tab, select the 'Pages' tab in the 'Code and Automation' section.
+  3. In the source section, select 'Deploy from a brach' and in the branch section, select 'Main' and click 'Save'.
+  4. The page will update and show "Your site is live at https://username.github.io/repository-name/", indicating a successful deployment. 
+
+The live link for the site can be found here - https://tanjava.github.io/RPSLS/
+
+
+# Credits
+
+Some usefull sites that really helped me throughout this project: 
+- https://devdocs.io/javascript/
+- https://stackoverflow.com
+- https://www.w3schools.com/
+
+
+## Media
+
+Images:
+- Website Logo
+    - [PngAAA-4532035](https://www.pngaaa.com/detail/4532035)
+- Emoji's 
+    - [Emojipedia](https://emojipedia.org/)
