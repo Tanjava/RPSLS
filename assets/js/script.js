@@ -34,7 +34,8 @@ let endResult = document.getElementById('end-result');
 let modal = document.getElementById('modal');
 let openGameRules = document.getElementById('game-rules');
 let closeGameRules = document.getElementById('close');
-let resetButton = document.getElementsByClassName('reset-btn');
+let buttons = document.querySelectorAll('.btn');
+let resetButton = document.getElementById('reset-btn');
 
 /**
  * Play the game and
@@ -78,7 +79,21 @@ function playGame(playerChoice) {
     if (round === 5) {
         endGame()
     }
+}
 
+/**
+ * Determine the final winner at the end of the game
+ */
+function endGame() {
+    if (playerScore > houseScore) {
+        endResult.innerHTML = `<h3 id="end-result" style="color: #92AF44">Congrats<br>You win!</h3>`;
+    } else if (playerScore < houseScore) {
+        endResult.innerHTML = `<h3 id="end-result" style="color: #e74646">Game Over<br>You Lose!</h3>`;
+    } else {
+        endResult.innerHTML = `<h3 id="end-result" style="color: #f2cd60">Oooops!<br>It's a draw</h3>`;
+    }
+    hideButtons();
+    showResetButton();
 }
 
 /**
@@ -112,38 +127,28 @@ function showPlayerChoice(playerChoice) {
 }
 
 /**
- * Determine the final winner at the end of the game
- */
-function endGame() {
-    if (playerScore > houseScore) {
-        endResult.innerHTML = `<h3 id="end-result" style="color: #92AF44">Congrats<br>You win!</h3>`;
-    } else if (playerScore < houseScore) {
-        endResult.innerHTML = `<h3 id="end-result" style="color: #e74646">Game Over<br>You Lose!</h3>`;
-    } else {
-        endResult.innerHTML = `<h3 id="end-result" style="color: #f2cd60">Oooops!<br>It's a draw</h3>`;
-    }
-}
-
-/**
  * Show and hide the game option buttons
+ * and the gameResult text
  */
 function showButtons() {
     for (let button of buttons) {
         button.style.display = 'inline-block'
-    }
+    };
+    gameResult.style.display = 'inline-block';
 }
 
 function hideButtons() {
     for (let button of buttons) {
-        button.style.display = 'none'
-    }
+        button.style.display = 'none';
+    };
+    gameResult.style.display = 'none';
 }
 
 /**
  * Show and hide the reset button
  */
 function showResetButton() {
-    resetButton.style.display = 'block';
+    resetButton.style.display = 'inline-block';
 }
 
 function hideResetButton() {
