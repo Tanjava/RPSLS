@@ -125,6 +125,21 @@ function endGame() {
 }
 
 /**
+ * Show and hide the game option buttons
+ */
+function showButtons() {
+    for (let button of buttons) {
+        button.style.display = 'inline-block'
+    }
+}
+
+function hideButtons() {
+    for (let button of buttons) {
+        button.style.display = 'none'
+    }
+}
+
+/**
  * Show and hide the reset button
  */
 function showResetButton() {
