@@ -22,8 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     }
+    openGameRules.addEventListener('click', openModal);
+    closeGameRules.addEventListener('click', closeModal);
 });
-
 
 
 let gameOptions = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
@@ -35,27 +36,15 @@ let round = 0;
 let gameResult = document.getElementById('game-result');
 let endResult = document.getElementById('end-result');
 let modal = document.getElementById('modal');
-let gameRules = document.getElementById('game-rules');
-let close = document.getElementsByClassName('close');
-
-gameRules.addEventListener('click', openModal);
-close.addEventListener('click', closeModal);
-
-function openModal() {
-    modal.style.display = 'block';
-    }
-
-function closeModal() {
-    modal.style.display = 'none';
-}
-
+let openGameRules = document.getElementById('game-rules');
+let closeGameRules = document.getElementById('close');
 
 /**
  * Play the game and
- * determine the winner of the game
+ * determine the winner of each round
  */
 function playGame(playerChoice) {
-    
+
     if (round >= 5) {
         endGame();
         return;
@@ -95,8 +84,6 @@ function playGame(playerChoice) {
 
 }
 
-
-
 /**
  * Get the computer's choice (random)
  */
@@ -127,6 +114,9 @@ function showPlayerChoice(playerChoice) {
     `;
 }
 
+/**
+ * Determine the final winner at the end of the game
+ */
 function endGame() {
     if (playerScore > houseScore) {
         endResult.innerHTML = `<h3 id="end-result" style="color: #92AF44">You Won!<br>Please Refresh</h3>`;
@@ -135,6 +125,14 @@ function endGame() {
     } else {
         endResult.innerHTML = `<h3 id="end-result" style="color: #f2cd60">You Tied!<br>Please Refresh</h3>`;
     }
+}
+
+function openModal() {
+    modal.style.display = 'flex';
+}
+
+function closeModal() {
+    modal.style.display = 'none';
 }
 
 // /**
