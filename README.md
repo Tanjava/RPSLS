@@ -4,20 +4,7 @@
 
 Rock, Paper, Scissors, Lizard, Spock, also known as RPSLS, is a game of chance and is the exended and more complex version of the classic hand game 'Rock, Paper, Scissors'. This 'Lizard Spock' version has been made popular by the television show "Big Bang Theory.
 
-Each player picks a random variable and reveals it at the same time. 
-
-- Scissors cuts Paper
-- Paper covers Rock
-- Rock crushes Lizard
-- Lizard poisons Spock
-- Spock smashes Scissors
-- Scissors decapitates Lizard
-- Lizard eats Paper
-- Paper disproves Spock
-- Spock vaporizes Rock
-- (and as it always has) Rock crushes Scissors
-
-The live game can be accessed and played here - https://tanjava.github.io/RPSLS/
+The live game can be accessed and played here - [RPSLS Game](https://tanjava.github.io/RPSLS/)
 
 # Table of contents
 - [Design](#design)
@@ -29,11 +16,11 @@ The live game can be accessed and played here - https://tanjava.github.io/RPSLS/
     - [Languages Used](#languages-used)
     - [Header](#header)
     - [Gameboard](#wgameboard)
-    - [Description](#description--tooltip)
-    - [Interactive Elements](#interactive-elements)
-      - [Game Option Buttons](#game-option-buttons)
-      - [Scoreboard](#scoreboard)
-      - [visual feedback](#visual-feedback)
+    - [Scoreboard](#scoreboard)
+    - [Game Option Buttons](#game-option-buttons)
+    - [Tooltip](#tooltip)
+    - [Visual Feedback](#visual-feedback)
+    - [Game Rules](#game-rules)
     - [Footer](#footer)
   - [Future Features](#future-features)
 - [Testing](#testing)
@@ -50,7 +37,7 @@ The design of the RPSLS game is simple and intuitive, with clear visuals and int
 
 ## Color Scheme
 
-Based on the logo and the yellow hand emoji's the following colors were chosen:
+The color scheme of the game is based on the logo and the yellow hand emojis. The following colors were chosen:
 
 ![Color palette](assets/readme-images/rpsls-color-palette.png)
 
@@ -70,12 +57,18 @@ The following fonts were used in the game:
 
 Hand emoji images were used as game gestures.
 
+✊ Raised Fist (rock)
+🤚 Raised Back of Hand (paper)
+✌️ Victory Hand (scissors)
+🤏 Pinching Hand (lizard)
+🖖 Vulcan Salute (Spock)
+
 
 # Features
 
 ## Existing Features:
 
-This is a one page game website with interactive elements. The user plays against the computer for 5 rounds, and the player with the highest score at the end wins the game.
+The RPSLS Game is a one-page game website with interactive elements and visual cues. Users can select their hand choice and play against the computer for 5 rounds. The player with the highest score at the end wins the game.
 
 
 ### Languages Used
@@ -83,7 +76,7 @@ This is a one page game website with interactive elements. The user plays agains
 - HTML5 
     - Used for structuring the content and elements of the game
 - CSS3
-    - Used for styling the game board and elements
+    - Used for styling the website
 - JavaScript
     - Used for implementing the game logic and interactivity
 
@@ -91,45 +84,47 @@ This is a one page game website with interactive elements. The user plays agains
 
 The header at the top of the page includes the game's title and logo. 
 
-
 ### Gameboard
 
-The gameboard is the main section of the game that displays the user's and computer's scores, their choices (represented by an big emoji), and the game options (buttons).
+The gameboard is the main section of the game that displays the user's and computer's scores, their choices (represented by large emoji images), and the game options (buttons).
 
+### Scoreboard
+
+The scoreboard displays the current scores for the user and the computer. The scores update dynamically as the game progresses based on the outcome of each round.
+
+### Game option buttons
+
+There are five game option buttons, each representing a different choice: Rock, Paper, Scissors, Lizard, and Spock. The buttons glow and subtly lift when the user hovers over them, making the game more engaging. Clicking on a button starts a game round. The winner of the round is determined based on the player's choice and the randomly generated computer's choice.
 
 ### Tooltip
 
 Hovering over each button displays a brief tooltip providing information about the corresponding game move. This helps users understand the rules of the game and the strengths/weaknesses of each move.
 
+### Visual Feedback
 
-### Interactive Elemente
+The default hand gesture displayed is 'Rock'. Each round, when the user selects their hand choice, the game visually updates the user's and computer's choices with the corresponding emoji images. After a couple of seconds it switches back to 'Rock', simulating how the game is played in real life before players reveal their next hand.
 
-The game includes several interactive elements that allow the player to make choices and play the game.
+Furthermore, a message for each game outcome (win, lose, or tie) will be displayed after every round (e.g. "You win this round!") and at the end of the game with the final result (e.g. "Game Over. You Lose!").
 
-#### Game option buttons
+### Game Rules
 
-There are five game option buttons, each representing a different choice: Rock, Paper, Scissors, Lizard, and Spock. Clicking on a button triggers the playRound function in JavaScript, which determines the winner of the round based on the player's choice and a random choice for the house.
+In the footer of the website, users can find the game rules. When clicked, a modal will appear with an image showing how the game is played. This can be helpful for new players who are unfamiliar with the expanded version of the game.
 
-#### Scoreboard
+- Rock crushes Lizard and (as it always has) crushes Scissors.
+- Paper covers Rock and disproves Spock.
+- Scissors cuts Paper and decapitates Lizard.
+- Lizard poisons Spock and eats Paper.
+- Spock smashes Scissors and vaporizes Rock.
 
-The scoreboard displays the current scores for the user and the computer. The scores update dynamically as the game progresses based on the outcome of each round. 
-
-
-#### Visual Feedback
-
-- Each round when the user selects a game option, the game visually updates the user's and computer's choices with the corresponding emoji images.
-- Furthermore, a message with the game outcome (win, lose, or tie) will be displayed after every round (e.g. "You win this round!") and at the end of the game with the final result (e.g. "Game Over. You Lose!").
-
-
-### Footer Section
+### Footer
 
 The footer contains copyright information on the left, and the game rules on the right.
 
 
 ## Future Features
 
-- Add a reset button once the game is over that allows the player to reset the game and starts a new one. 
-- Add animations to the game elements to make the interface more engaging.
+- Add a 'bounce' animation to the default 'Rock' hand emoji before the player's and computer's hands are shown. The game starts with 'Rock', then there's a countdown - 3(rock), 2(paper), 1(scissors), Shoot. On "Shoot" the choices are revealed.
+- Add sound effects for each gesture to enhance gaming experience.
 
 
 # Testing
@@ -138,7 +133,7 @@ The website was tested on Google Chrome, Microsoft Edge, Safari, and Android dev
 
 Google DevTools was used to test different devices and screen resolutions. 
 
-All buttons functioned as expected.
+All buttons functioned as expected, as did the game itself.
 
 
 ## Validator Testing
@@ -165,17 +160,17 @@ All buttons functioned as expected.
 
 ## Unfixed Bugs
 
-No major bugs were detected but minor improvements and optimizations can still be made.
+No major bugs were detected, but minor improvements and optimizations can still be made.
 
 
 ## Frameworks, Libraries and Programs Used
 
 - Github: Store Repository
-- Gitpod: Create HTML and CSS files
+- Gitpod: Create HTML, CSS and JavaScript files
 - Google Fonts: 
   - Font-family 'Stint Ultra Expanded', 'Orbitron', and 'Roboto'
 - Am I Responsive
-  - Screenshot of the final project on all devices
+  - Screenshot of the final project on different devices
 
 
 # Deployment
