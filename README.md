@@ -2,7 +2,7 @@
 
 ![Am I Responsive Image](assets/readme-images/rpsls-amiresponsive.png)
 
-Popularized by the TV Show "The Big Bang Theory", Rock, Paper, Scissors, Lizard, Spock (RPSLS) is a game of chance and the extended version of the classics hand game of Rock, Paper, Scissors. 
+Rock, Paper, Scissors, Lizard, Spock, also known as RPSLS, is a game of chance and is the exended and more complex version of the classic hand game 'Rock, Paper, Scissors'. This 'Lizard Spock' version has been made popular by the television show "Big Bang Theory.
 
 Each player picks a random variable and reveals it at the same time. 
 
@@ -123,7 +123,7 @@ The scoreboard displays the current scores for the user and the computer. The sc
 
 ### Footer Section
 
-The footer contains copyright information on the left and the game rules on the right.
+The footer contains copyright information on the left, and the game rules on the right.
 
 
 ## Future Features
@@ -176,8 +176,6 @@ Minor improvements and optimizations can still be made.
 - Gitpod: Create HTML and CSS files
 - Google Fonts: 
   - Font-family 'Stint Ultra Expanded', 'Orbitron', and 'Roboto'
-- Font Awesome & Favicon
-  - For cover text icons, location icon and Social Media icons
 - Am I Responsive
   - Screenshot of the final project on all devices
 
