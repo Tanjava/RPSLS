@@ -42,7 +42,6 @@ let closeGameRules = document.getElementById('close');
 function playGame(playerChoice) {
 
     if (round >= 5) {
-        endGame();
         return;
     }
 
@@ -53,6 +52,7 @@ function playGame(playerChoice) {
     showPlayerChoice(playerChoice);
 
     if (playerChoice === houseChoice) {
+        gameResult.innerHTML = "It's a tie!";
     } else {
         if (
             (playerChoice === 'Rock' && (houseChoice === 'Scissors' || houseChoice === 'Lizard')) ||
@@ -72,6 +72,10 @@ function playGame(playerChoice) {
             gameResult.innerHTML = "House wins this round!";
         }
         // increaseScore(winner)
+    }
+
+    if (round === 5) {
+        endGame()
     }
 
 }
