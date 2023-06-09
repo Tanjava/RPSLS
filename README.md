@@ -10,7 +10,8 @@ The live game can be accessed and played here - [RPSLS Game](https://tanjava.git
 - [Design](#design)
   - [Color Scheme](#color-scheme)
   - [Typography](#typography)
-  - [Images](#images)    
+  - [Images](#images)
+  - [Wireframes](#wireframes)    
 - [Features](#features)
   - [Existing Features](#existing-features)
     - [Languages Used](#languages-used)
@@ -64,6 +65,14 @@ Hand emoji images were used as game gestures.
 🤏 Pinching Hand (lizard)
 🖖 Vulcan Salute (Spock)
 
+## Wireframes
+
+- Desktop
+  ![Wireframe Desktop](assets/readme-images/rpsls-wireframe-desktop.png)
+
+- Tablet & Mobile
+  ![Wireframes Tablet & Mobile](assets/readme-images/rpsls-wireframes-tablet-mobile.png)
+
 
 # Features
 
@@ -74,12 +83,9 @@ The RPSLS Game is a one-page game website with interactive elements and visual c
 
 ### Languages Used
 
-- HTML5 
-    - Used for structuring the content and elements of the game
-- CSS3
-    - Used for styling the website
-- JavaScript
-    - Used for implementing the game logic and interactivity
+- HTML5: Used for structuring the content and elements of the game
+- CSS3: Used for styling the website
+- JavaScript: Used for implementing the game logic and interactivity
 
 ### Header
 
@@ -181,6 +187,7 @@ No major bugs were detected, but minor improvements and optimizations can still 
 
 - Github: Store Repository
 - Gitpod: Create HTML, CSS and JavaScript files
+- Balsamiq Wireframes: Create wireframes for the website.
 - Google Fonts: 
   - Font-family 'Stint Ultra Expanded', 'Orbitron', and 'Roboto'
 - Am I Responsive
