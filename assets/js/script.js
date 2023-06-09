@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 let gameOptions = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 let playerScore = 0;
 let houseScore = 0;
-// let winner = '';
 let round = 0;
 
 let gameResult = document.getElementById('game-result');
@@ -64,17 +63,14 @@ function playGame(playerChoice) {
             (playerChoice === 'Lizard' && (houseChoice === 'Paper' || houseChoice === 'Spock')) ||
             (playerChoice === 'Spock' && (houseChoice === 'Rock' || houseChoice === 'Scissors'))
         ) {
-            // winner = 'player';
             playerScore++;
             document.getElementById('player-score').innerHTML = playerScore;
             gameResult.innerHTML = "You win this round!";
         } else {
-            // winner = 'house'
             houseScore++;
             document.getElementById('house-score').innerHTML = houseScore;
             gameResult.innerHTML = "House wins this round!";
         }
-        // increaseScore(winner)
     }
 
     if (round === 5) {
@@ -176,14 +172,3 @@ function openModal() {
 function closeModal() {
     modal.style.display = 'none';
 }
-
-// /**
-//  * Increase winner's score
-//  */
-// function increaseScore(winner) {
-//     if (winner === 'player') {
-//         playerScore++;
-//     } else if (winner === 'house') {
-//         houseScore++
-//     }
-// }
