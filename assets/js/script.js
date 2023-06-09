@@ -147,14 +147,12 @@ function showButtons() {
     for (let button of buttons) {
         button.style.display = 'inline-block'
     };
-    gameResult.style.display = 'inherit';
 }
 
 function hideButtons() {
     for (let button of buttons) {
         button.style.display = 'none';
     };
-    gameResult.style.display = 'none';
 }
 
 /**

@@ -165,9 +165,7 @@ All buttons functioned as expected.
 
 ## Unfixed Bugs
 
-There is no visual feedback regarding the outcome of the fifth and final round as the final game result is immediatly displayed after the last round.
-
-Minor improvements and optimizations can still be made.
+No major bugs were detected but minor improvements and optimizations can still be made.
 
 
 ## Frameworks, Libraries and Programs Used
