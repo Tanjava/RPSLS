@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     openGameRules.addEventListener('click', openModal);
     closeGameRules.addEventListener('click', closeModal);
+    resetButton.addEventListener('click', resetGame);
 });
 
 
@@ -96,6 +97,17 @@ function endGame() {
     showResetButton();
 }
 
+function resetGame() {
+    round = 0;
+    playerScore = 0;
+    houseScore = 0;
+    document.getElementById('player-score').innerHTML = playerScore;
+    document.getElementById('house-score').innerHTML = houseScore;
+    gameResult.innerHTML = 'Make Your Move!';
+    showButtons();
+    hideResetButton();
+}
+
 /**
  * Get the computer's choice (random)
  */
@@ -134,7 +146,7 @@ function showButtons() {
     for (let button of buttons) {
         button.style.display = 'inline-block'
     };
-    gameResult.style.display = 'inline-block';
+    gameResult.style.display = 'inherit';
 }
 
 function hideButtons() {
