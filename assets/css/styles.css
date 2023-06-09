@@ -123,7 +123,7 @@ header div {
 }
 
 .vs-section h3 {
-    color: #333;
+    color: #f2cd60;
 }
 
 /* Game Options */
@@ -166,7 +166,7 @@ header div {
 .modal-content {
     background-color: #141E30;
     padding: 25px;
-    width: 50%;
+    width: 75%;
     border-radius: 20px;
 }
 

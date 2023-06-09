@@ -8,10 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', function () {
 
             let playerChoice = this.getAttribute('data-choice');
-            console.log('Player chose ' + playerChoice);
-
-            let houseChoice = randomHouse();
-            console.log('Computer chose ' + houseChoice);
 
             playGame(playerChoice);
 
@@ -57,8 +53,6 @@ function playGame(playerChoice) {
     showPlayerChoice(playerChoice);
 
     if (playerChoice === houseChoice) {
-        console.log("It's a tie");
-        gameResult.innerHTML = "It's a tie!";
     } else {
         if (
             (playerChoice === 'Rock' && (houseChoice === 'Scissors' || houseChoice === 'Lizard')) ||
@@ -69,15 +63,13 @@ function playGame(playerChoice) {
         ) {
             // winner = 'player';
             playerScore++;
-            console.log('Player wins');
             document.getElementById('player-score').innerHTML = playerScore;
-            gameResult.innerHTML = "You win!";
+            gameResult.innerHTML = "You win this round!";
         } else {
             // winner = 'house'
             houseScore++;
-            console.log('House wins');
             document.getElementById('house-score').innerHTML = houseScore;
-            gameResult.innerHTML = "You lose!";
+            gameResult.innerHTML = "House wins this round!";
         }
         // increaseScore(winner)
     }
@@ -119,11 +111,11 @@ function showPlayerChoice(playerChoice) {
  */
 function endGame() {
     if (playerScore > houseScore) {
-        endResult.innerHTML = `<h3 id="end-result" style="color: #92AF44">You Won!<br>Please Refresh</h3>`;
+        endResult.innerHTML = `<h3 id="end-result" style="color: #92AF44">Congrats<br>You win!</h3>`;
     } else if (playerScore < houseScore) {
-        endResult.innerHTML = `<h3 id="end-result" style="color: #e74646">You Lost!<br>Please Refresh</h3>`;
+        endResult.innerHTML = `<h3 id="end-result" style="color: #e74646">Game Over<br>You Lose!</h3>`;
     } else {
-        endResult.innerHTML = `<h3 id="end-result" style="color: #f2cd60">You Tied!<br>Please Refresh</h3>`;
+        endResult.innerHTML = `<h3 id="end-result" style="color: #f2cd60">Oooops!<br>It's a draw</h3>`;
     }
 }
 

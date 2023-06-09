@@ -97,9 +97,9 @@ The header at the top of the page includes the game's title and logo.
 The gameboard is the main section of the game that displays the user's and computer's scores, their choices (represented by an big emoji), and the game options (buttons).
 
 
-### Description/Tooltip
+### Tooltip
 
-Hovering over each button displays a brief description/tooltip providing information about the corresponding game move. This helps users understand the rules of the game and the strengths/weaknesses of each move.
+Hovering over each button displays a brief tooltip providing information about the corresponding game move. This helps users understand the rules of the game and the strengths/weaknesses of each move.
 
 
 ### Interactive Elemente
