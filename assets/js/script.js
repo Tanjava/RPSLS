@@ -87,7 +87,7 @@ function playGame(playerChoice) {
  */
 function endGame() {
     if (playerScore > houseScore) {
-        endResult.innerHTML = `<h3 id="end-result" style="color: #92AF44">Congrats<br>You win!</h3>`;
+        endResult.innerHTML = `<h3 id="end-result" style="color: #92AF44">Congrats!<br>You win!</h3>`;
     } else if (playerScore < houseScore) {
         endResult.innerHTML = `<h3 id="end-result" style="color: #e74646">Game Over<br>You Lose!</h3>`;
     } else {
