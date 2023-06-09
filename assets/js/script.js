@@ -34,6 +34,7 @@ let endResult = document.getElementById('end-result');
 let modal = document.getElementById('modal');
 let openGameRules = document.getElementById('game-rules');
 let closeGameRules = document.getElementById('close');
+let resetButton = document.getElementsByClassName('reset-btn');
 
 /**
  * Play the game and
@@ -123,6 +124,20 @@ function endGame() {
     }
 }
 
+/**
+ * Show and hide the reset button
+ */
+function showResetButton() {
+    resetButton.style.display = 'block';
+}
+
+function hideResetButton() {
+    resetButton.style.display = 'none';
+}
+
+/**
+ * Show and hide the modal/popup window
+ */
 function openModal() {
     modal.style.display = 'flex';
 }
