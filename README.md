@@ -23,6 +23,7 @@ The live game can be accessed and played here - [RPSLS Game](https://tanjava.git
     - [Game Rules](#game-rules)
     - [Footer](#footer)
   - [Future Features](#future-features)
+- [What I Learned](#what-i-learned)
 - [Testing](#testing)
   - [Validator Testing](#validator-testing)
   - [Unfixed Bugs](#unfixed-bugs)
@@ -125,6 +126,18 @@ The footer contains copyright information on the left, and the game rules on the
 
 - Add a 'bounce' animation to the default 'Rock' hand emoji before the player's and computer's hands are shown. The game starts with 'Rock', then there's a countdown - 3(rock), 2(paper), 1(scissors), Shoot. On "Shoot" the choices are revealed.
 - Add sound effects for each gesture to enhance gaming experience.
+
+
+
+# What I Learned
+
+During the development of the RPSLS game, I encountered a situation where I initially wrote a function called 'increaseScore' to increase the score of the winner, but later realized that I could achieve the same result without needing the function.
+
+In the original code, after determining the winner of a round in the 'PlayGame' function, I called the 'increaseScore' function. Inside the 'IncreaseScore' function, I increased the corresponding score based on the winner.
+
+Upon reviewing my code, I realized that I could simplify it by directly increasing the 'playerScore' or 'houseScore' variables within the 'playGame' function itself.
+
+This taught me the importance of continuously reassessing and refining my code as I develop a project, and considering if the use of a function is necessary or if the same result can be achieved in a simpler and more straightforward way.
 
 
 # Testing
