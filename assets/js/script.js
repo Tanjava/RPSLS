@@ -104,6 +104,7 @@ function resetGame() {
     document.getElementById('player-score').innerHTML = playerScore;
     document.getElementById('house-score').innerHTML = houseScore;
     gameResult.innerHTML = 'Make Your Move!';
+    endResult.innerHTML = 'VS'
     showButtons();
     hideResetButton();
 }

@@ -2,7 +2,7 @@
 
 ![Am I Responsive Image](assets/readme-images/rpsls-amiresponsive.png)
 
-Popularized by the TV Show "The Big Bang Theory", Rock, Paper, Scissors, Lizard, Spock (RPSLS) is a game of chance and the extended version of the classics game of Rock, Paper, Scissors. 
+Popularized by the TV Show "The Big Bang Theory", Rock, Paper, Scissors, Lizard, Spock (RPSLS) is a game of chance and the extended version of the classics hand game of Rock, Paper, Scissors. 
 
 Each player picks a random variable and reveals it at the same time. 
 
@@ -118,7 +118,7 @@ The scoreboard displays the current scores for the user and the computer. The sc
 #### Visual Feedback
 
 - Each round when the user selects a game option, the game visually updates the user's and computer's choices with the corresponding emoji images.
-- Furthermore, a message with the game outcome (win, lose, tie) will be displayed after every round (e.g. "You win this round!") and at the end of the game with the final result (e.g. "You lost! Try again").
+- Furthermore, a message with the game outcome (win, lose, or tie) will be displayed after every round (e.g. "You win this round!") and at the end of the game with the final result (e.g. "Game Over. You Lose!").
 
 
 ### Footer Section
@@ -165,7 +165,9 @@ All buttons functioned as expected.
 
 ## Unfixed Bugs
 
-No major bugs were left unfixed. Minor improvements and optimizations can still be made.
+There is no visual feedback regarding the outcome of the fifth and final round as the final game result is immediatly displayed after the last round.
+
+Minor improvements and optimizations can still be made.
 
 
 ## Frameworks, Libraries and Programs Used
