@@ -74,7 +74,7 @@ function playGame(playerChoice) {
     }
 
     if (round === 5) {
-        endGame()
+        endGame();
     }
 }
 
@@ -100,7 +100,7 @@ function resetGame() {
     document.getElementById('player-score').innerHTML = playerScore;
     document.getElementById('house-score').innerHTML = houseScore;
     gameResult.innerHTML = 'Make Your Move!';
-    endResult.innerHTML = 'VS'
+    endResult.innerHTML = 'VS';
     showButtons();
     hideResetButton();
 }
@@ -141,14 +141,14 @@ function showPlayerChoice(playerChoice) {
  */
 function showButtons() {
     for (let button of buttons) {
-        button.style.display = 'inline-block'
-    };
+        button.style.display = 'inline-block';
+    }
 }
 
 function hideButtons() {
     for (let button of buttons) {
         button.style.display = 'none';
-    };
+    }
 }
 
 /**
