@@ -68,10 +68,10 @@ Hand emoji images were used as game gestures.
 ## Wireframes
 
 - Desktop
-  ![Wireframe Desktop](assets/readme-images/rpsls-wireframe-desktop.png)
+![Wireframe Desktop](assets/readme-images/rpsls-wireframe-desktop.png)
 
 - Tablet & Mobile
-  ![Wireframes Tablet & Mobile](assets/readme-images/rpsls-wireframes-tablet-mobile.png)
+![Wireframes Tablet & Mobile](assets/readme-images/rpsls-wireframes-tablet-mobile.png)
 
 
 # Features
@@ -79,7 +79,6 @@ Hand emoji images were used as game gestures.
 ## Existing Features:
 
 The RPSLS Game is a one-page game website with interactive elements and visual cues. Users can select their hand choice and play against the computer for 5 rounds. The player with the highest score at the end wins the game.
-
 
 ### Languages Used
 
@@ -131,7 +130,6 @@ The footer contains copyright information on the left, and the game rules on the
 ## Future Features
 
 - Add a 'bounce' animation to the default 'Rock' hand emoji before the player's and computer's hands are shown. The game starts with 'Rock', then there's a countdown - 3(rock), 2(paper), 1(scissors), Shoot. On "Shoot" the choices are revealed.
-- Add sound effects for each gesture to enhance gaming experience.
 
 
 # What I Learned
