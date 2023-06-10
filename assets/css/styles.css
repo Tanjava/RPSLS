@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: calc(15px + 0.4vw);
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -23,6 +19,7 @@ body {
 
 h1 {
     font-family: 'Stint Ultra Expanded', cursive;
+    font-size: 2.5vw;
     color: #92AF44;
 }
 
@@ -248,11 +245,11 @@ footer {
     }
 
     h2 {
-        font-size: 2.9vw;
+        font-size: 3vw;
     }
 
     #end-result, #game-result {
-        font-size: 2.7vw;
+        font-size: 3vw;
     }
 
     .game-area {
