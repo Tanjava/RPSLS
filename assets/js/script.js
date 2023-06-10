@@ -87,7 +87,7 @@ function endGame() {
     } else if (playerScore < houseScore) {
         endResult.innerHTML = `<h3 id="end-result" style="color: #e74646">Game Over<br>You Lose!</h3>`;
     } else {
-        endResult.innerHTML = `<h3 id="end-result" style="color: #f2cd60">Oooops!<br>It's a draw</h3>`;
+        endResult.innerHTML = `<h3 id="end-result" style="color: #f2cd60">Ooops<br>A Draw</h3>`;
     }
     hideButtons();
     showResetButton();
