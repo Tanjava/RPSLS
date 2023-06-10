@@ -278,10 +278,6 @@ footer {
 /* for extra small screen size from 500px wide and down */
 @media screen and (max-width: 580px) {
 
-    p {
-        font-size: 0.59rem;
-    }
-
     #game-result {
         font-size: 2.5vw;
     }
