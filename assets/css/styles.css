@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: calc(15px + 0.390625vw);
+    font-size: calc(15px + 0.4vw);
 }
 
 body {
@@ -34,8 +34,6 @@ h3 {
 
 p {
     color: #cbd7de;
-    display: inline-block;
-    margin: 0 50px;
 }
 
 hr {
@@ -95,10 +93,6 @@ header div {
 
 .game-section h2 {
     margin-bottom: 25%;
-}
-
-#player-section {
-    padding-left: 2%;
 }
 
 .big-emoji-2 {
@@ -188,8 +182,11 @@ header div {
 
 footer {
     height: 40px;
+    width: 60%;
     text-align: center;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 
 #game-rules {
@@ -242,6 +239,10 @@ footer {
 /* for medium screen size from 1024px wide and down */
 @media screen and (max-width: 1024px) {
 
+    p {
+        font-size: 3vw;
+    }
+
     h1 {
         font-size: 3.5vw;
     }
@@ -278,7 +279,7 @@ footer {
 @media screen and (max-width: 580px) {
 
     p {
-        font-size: 0.55rem;
+        font-size: 0.59rem;
     }
 
     #game-result {
