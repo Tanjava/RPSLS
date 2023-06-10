@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -19,16 +23,7 @@ body {
 
 h1 {
     font-family: 'Stint Ultra Expanded', cursive;
-    font-size: 2.5vw;
     color: #92AF44;
-}
-
-h2 {
-    font-size: 1.5vw;
-}
-
-h3 {
-    font-size: 1.4vw;
 }
 
 h2,
@@ -38,7 +33,6 @@ h3 {
 }
 
 p {
-    font-size: 1.1vw;
     color: #cbd7de;
     display: inline-block;
     margin: 0 50px;
@@ -57,7 +51,6 @@ header {
 }
 
 header h2 {
-    font-size: 1.3vw;
     color: #B9DAEE;
 }
 
@@ -70,7 +63,7 @@ header div {
 .spock-logo {
     width: 10%;
     height: auto;
-    margin: 20px 35px 0;
+    margin: 3.5% 5% 0;
 }
 
 
@@ -96,13 +89,18 @@ header div {
 .game-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
+    padding: 0 10%;
 }
 
 .game-section h2 {
     margin-bottom: 40px;
+}
+
+#player-section {
+    padding-left: 2%;
 }
 
 .big-emoji {
@@ -151,9 +149,11 @@ header div {
     display: none;
     background-color: #0d1321;
     width: 20%;
-    height: 50px;
+    padding: 5px;
     border-radius: 10%;
     box-shadow: 0px 0px 10px 2px rgba(127, 255, 0, 0.7);
+    font-family: 'Orbitron', sans-serif;
+    color: #92AF44;
     text-align: center;
 }
 
@@ -161,10 +161,6 @@ header div {
     background-color: #232835;
     transform: translateY(-2px);
     box-shadow: 0px 0px 10px 2px rgba(127, 255, 0, 0.7);
-}
-
-#reset-btn h3 {
-    color: #92AF44;
 }
 
 
@@ -274,23 +270,15 @@ footer {
     }
 
     h2 {
-        font-size: 2.3vw;
+        font-size: 2.8vw;
     }
 
-    h3 {
-        font-size: 2vw
-    }
-
-    p {
-        font-size: 2.5vw;
+    #end-result {
+        font-size: 2vw;
     }
 
     header {
         margin: 50px 0 10px;
-    }
-
-    header h2 {
-        font-size: 2vw;
     }
 
     .game-area {
@@ -318,59 +306,19 @@ footer {
     }
 }
 
-/* for small screen size from 850px wide and down */
-@media screen and (max-width: 850px) {
-
-    .big-emoji {
-        width: 80px;
-    }
-
-    .big-emoji-2 {
-        width: 80px;
-    }
-
-    .vs-section {
-        padding: 8px;
-        margin-top: 45px;
-    }
-
-    .btn {
-        width: 55px;
-        height: 55px;
-    }
-
-    .small-emoji {
-        width: 47px;
-        height: 47px;
-    }
-
-}
-
 /* for extra small screen size from 500px wide and down */
 @media screen and (max-width: 580px) {
 
-    h2 {
-        font-size: 2.5vw;
-    }
-
-    h3 {
-        font-size: 2.3vw;
-    }
-
     p {
-        font-size: 2.8vw;
+        font-size: 0.55rem;
+    }
+
+    #game-result {
+        font-size: 2.5vw;
     }
 
     header {
         margin: 30px 0 10px;
-    }
-
-    header h2 {
-        font-size: 2.2vw;
-    }
-
-    .spock-logo {
-        margin: 15px 20px 0
     }
 
     .game-area {
@@ -411,9 +359,5 @@ footer {
     .small-emoji {
         width: 40px;
         height: 40px;
-    }
-
-    footer {
-        margin-bottom: 0px;
     }
 }
